@@ -87,20 +87,13 @@ function Navbar({ route, navigate, dark = false, onOpenConsult }) {
 
 // ---------- Logo ----------
 function Logo({ dark = false }) {
-  const c = dark ? '#FFFFFF' : '#0E1116';
-  const accent = '#1565C0';
   return (
-    <div className="flex items-center gap-2.5">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-        <rect x="2" y="2" width="28" height="28" rx="6" stroke={c} strokeWidth="1.5"/>
-        <path d="M8 22 L8 10 L14 16 L20 10 L20 22" stroke={c} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round"/>
-        <circle cx="24" cy="22" r="1.6" fill={accent}/>
-      </svg>
-      <div className="flex flex-col leading-none">
-        <span className="display text-[16px] font-semibold tracking-tight" style={{ color: c }}>МАНАС</span>
-        <span className="text-[10px] font-mono tracking-[0.25em] mt-0.5" style={{ color: c, opacity: 0.6 }}>СТРОЙ · АТЫРАУ</span>
-      </div>
-    </div>
+    <img
+      src="Фасад/logo.png"
+      alt="МАНАС СТРОЙ"
+      className="h-12 w-12 object-contain rounded-full"
+      style={dark ? {} : { filter: 'drop-shadow(0 0 0px transparent)' }}
+    />
   );
 }
 
